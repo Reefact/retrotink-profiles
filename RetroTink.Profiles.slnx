@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RetroTink.Profiles.Json/RetroTink.Profiles.Json.csproj" />
+    <Project Path="src/RetroTink.Profiles/RetroTink.Profiles.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/RetroTink.Profiles.Json.Tests/RetroTink.Profiles.Json.Tests.csproj" />
+    <Project Path="tests/RetroTink.Profiles.Tests/RetroTink.Profiles.Tests.csproj" />
+  </Folder>
+</Solution>

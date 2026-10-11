@@ -754,3 +754,12 @@ Les caractéristiques concrètes du lecteur LaserDisc et du vidéoprojecteur ser
 8. Ne pas engager une implémentation non demandée : un accord sur la conception n'est pas automatiquement un feu vert pour modifier le dépôt.
 
 **Synthèse :** `RetroTink.Profiles` modélise les définitions et produit des profils résolus ; `RetroTink.Profiles.Json` conserve notre modèle complet ; `RetroTink.Profiles.Rt4` importe et exporte des configurations matérielles à partir d'un mapping vérifié. **Le JSON natif est la source de vérité pour la composition ; le RT4 est un artefact technique.** Ce document est une base de conception sérieuse, mais **explicitement ouverte à la remise en question au fur et à mesure des apprentissages**.
+---
+
+## 18. État d'implémentation
+
+*(ajouté le 11 octobre 2026, à tenir à jour)*
+
+- **Incrément 1 réalisé** : étapes 1 à 4 du §13 (socle Core, modèle de profils, résolution, persistance JSON v1) dans `src/RetroTink.Profiles` et `src/RetroTink.Profiles.Json`, avec tests dans `tests/`.
+- **Non réalisé** : étapes 5 à 8 (recherche RT4, codec RT4, couverture vidéo étendue, Studio). Aucun mapping binaire n'a été écrit, conformément au §8.4 : il faut d'abord des exports `.rt4` authentiques identifiés par modèle et firmware.
+- **Décisions prises et écarts** : consignés dans [`docs/decisions.md`](docs/decisions.md) (framework cible, namespaces, contrat d'erreur, règles d'identifiants, algorithme de résolution, schéma JSON). Le schéma JSON est documenté dans [`docs/json-schema-v1.md`](docs/json-schema-v1.md).

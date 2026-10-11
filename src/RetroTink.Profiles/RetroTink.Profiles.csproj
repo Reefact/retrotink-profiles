@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>RetroTink.Profiles</RootNamespace>
+    <PackageId>RetroTink.Profiles</PackageId>
+    <Description>Core domain model for RetroTINK profiles: typed settings, immutable profile definitions, composition/inheritance, deterministic resolution with provenance and diagnostics. No file system or codec dependencies.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>RetroTink.Profiles.Json</RootNamespace>
+    <PackageId>RetroTink.Profiles.Json</PackageId>
+    <Description>Versioned native JSON persistence for RetroTink.Profiles definitions (schema version 1), in memory or over streams, built on System.Text.Json.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../RetroTink.Profiles/RetroTink.Profiles.csproj" />
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+</Project>

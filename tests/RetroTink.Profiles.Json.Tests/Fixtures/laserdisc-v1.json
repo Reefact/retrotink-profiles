@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "profiles": [
+    {
+      "id": "ld-pal",
+      "name": "LaserDisc PAL",
+      "description": "Common settings for PAL LaserDiscs",
+      "sources": [],
+      "settings": [
+        {
+          "id": "input.source",
+          "value": "front-composite"
+        },
+        {
+          "id": "output.resolution",
+          "value": "1080p50"
+        },
+        {
+          "id": "output.hdr",
+          "value": "off"
+        },
+        {
+          "id": "processing.telecine",
+          "scope": {
+            "kind": "videoMode",
+            "value": "pal576i"
+          },
+          "value": "cadence-22"
+        }
+      ]
+    },
+    {
+      "id": "ld-pal-43",
+      "name": "PAL 4:3",
+      "sources": [
+        "ld-pal"
+      ],
+      "settings": [
+        {
+          "id": "geometry.aspectRatio",
+          "value": {
+            "numerator": 4,
+            "denominator": 3
+          }
+        },
+        {
+          "id": "geometry.pictureFormat",
+          "value": {
+            "kind": "full-frame"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ld-pal-cinema",
+      "name": "PAL CinemaScope",
+      "sources": [
+        "ld-pal"
+      ],
+      "settings": [
+        {
+          "id": "geometry.pictureFormat",
+          "value": {
+            "kind": "letterboxed",
+            "aspectRatio": {
+              "numerator": 47,
+              "denominator": 20
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ld-ntsc",
+      "name": "LaserDisc NTSC",
+      "sources": [],
+      "settings": [
+        {
+          "id": "input.source",
+          "value": "front-composite"
+        },
+        {
+          "id": "output.resolution",
+          "value": "1080p60"
+        },
+        {
+          "id": "processing.telecine",
+          "scope": {
+            "kind": "videoMode",
+            "value": "ntsc480i"
+          },
+          "value": "cadence-32"
+        }
+      ]
+    },
+    {
+      "id": "epson-fullhd",
+      "name": "Epson EH-TW4400 (Full HD)",
+      "sources": [],
+      "settings": [
+        {
+          "id": "output.resolution",
+          "value": "1080p60"
+        },
+        {
+          "id": "output.colorimetry",
+          "value": "rec709"
+        },
+        {
+          "id": "output.rgbRange",
+          "value": "limited"
+        }
+      ]
+    }
+  ]
+}

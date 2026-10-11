@@ -1,0 +1,32 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{json,yml,yaml,props,targets,csproj,sln,slnx,xml}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.cs]
+csharp_style_namespace_declarations = file_scoped:warning
+csharp_prefer_braces = true:suggestion
+dotnet_sort_system_directives_first = true
+
+# CA1000: static members on generic types are the whole point of the SmartEnum<TSelf> base.
+dotnet_diagnostic.CA1000.severity = none
+# CA1034: nested public types are not used; keep default.
+# CA1710: ProfileSettings / SettingCatalog implement IReadOnlyCollection but are domain names, not "collections".
+dotnet_diagnostic.CA1710.severity = none
+# CA1711: "Smart Enum" is the vocabulary of the specification; SmartEnum<TSelf> / ISmartEnum<TSelf> keep it.
+dotnet_diagnostic.CA1711.severity = none
+# CA1716: identifiers such as "Global" or "Default" may clash with VB keywords; accepted.
+dotnet_diagnostic.CA1716.severity = none
+# CA1724: short domain names (Settings, Values) may match namespace segments; accepted.
+dotnet_diagnostic.CA1724.severity = none
